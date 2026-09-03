@@ -5,7 +5,7 @@ router.post("/ask", async (req, res) => {
   try {
     const { question } = req.body;
 
-    if (!question || !question.trim()) {
+    if (!question || question.trim()) {
       return res.status(400).json({
         error: "Question is required",
       });
